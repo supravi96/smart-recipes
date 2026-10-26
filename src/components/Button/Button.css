@@ -1,0 +1,15 @@
+.custom-btn {
+
+    /* aesthetic properties */
+    background-color: #fadadd;
+    border: none;  
+    text-align: center;
+    font: inherit;
+    letter-spacing: inherit;
+    flex: 1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    min-width: 100px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}

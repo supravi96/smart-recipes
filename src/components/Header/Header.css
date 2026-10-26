@@ -1,0 +1,45 @@
+.header {
+  background: #fadadd;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 18px 24px;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo-mark {
+  display: grid;
+  place-items: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 14px;
+  background: #fff8f5;
+  color: #a84e62;
+  font-size: 0.9rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+  box-shadow: 0 3px 10px rgba(112, 48, 62, 0.12);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: clamp(1.65rem, 4vw, 2.25rem);
+  color: #1f2937;
+  font-weight: 750;
+  letter-spacing: -0.055em;
+  line-height: 1.1;
+}
+
+@media (max-width: 480px) {
+  .header {
+    padding: 16px;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+  }
+}

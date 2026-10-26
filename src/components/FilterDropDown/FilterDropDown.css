@@ -1,0 +1,93 @@
+.filter-dropdown-trigger {
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.25rem;
+  width: min(15rem, calc(100vw - 3rem));
+  min-height: 2.875rem;
+  padding: 0.7rem 1rem;
+  border: 1px solid #efc4ce;
+  border-radius: 0.75rem;
+  background: #fff5f7;
+  color: #714653;
+  font: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
+}
+
+.filter-dropdown-trigger::after {
+  width: 0.5rem;
+  height: 0.5rem;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  content: "";
+  transform: translateY(-0.125rem) rotate(45deg);
+  transition: transform 160ms ease;
+}
+
+.filter-dropdown-trigger[aria-expanded="true"]::after {
+  transform: translateY(0.125rem) rotate(225deg);
+}
+
+.filter-dropdown-trigger:hover {
+  border-color: #e9aebb;
+  background: #ffedf1;
+}
+
+.filter-dropdown-trigger:focus-visible,
+.filter-dropdown-option:focus-visible {
+  outline: 3px solid #d9879b;
+  outline-offset: 3px;
+}
+
+.filter-dropdown-menu {
+  position: absolute;
+  z-index: 30;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  display: grid;
+  gap: 0.25rem;
+  width: min(15rem, calc(100vw - 3rem));
+  box-sizing: border-box;
+  padding: 0.4rem;
+  border: 1px solid #f1d8de;
+  border-radius: 0.8rem;
+  background: #fff;
+  box-shadow: 0 12px 28px rgb(91 48 60 / 14%), 0 2px 6px rgb(91 48 60 / 7%);
+}
+
+.filter-dropdown-option {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border: 0;
+  border-radius: 0.5rem;
+  background: transparent;
+  color: #604752;
+  font: inherit;
+  font-size: 0.88rem;
+  line-height: 1.35;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 140ms ease, color 140ms ease;
+}
+
+.filter-dropdown-option:hover {
+  background: #fff0f3;
+  color: #8e4d60;
+}
+
+.filter-dropdown-trigger:focus-visible,
+.filter-dropdown-option:focus-visible {
+  outline-color: #bd687e;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .filter-dropdown-trigger,
+  .filter-dropdown-trigger::after,
+  .filter-dropdown-option {
+    transition: none;
+  }
+}
